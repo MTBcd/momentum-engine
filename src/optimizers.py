@@ -1,4 +1,3 @@
-from scipy import optimize
 import pandas as pd
 import numpy as np 
 from .interfaces import Optimizer
