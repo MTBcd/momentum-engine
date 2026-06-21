@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
-from config import BacktestConfig
+from .config import BacktestConfig
 from dataclasses import dataclass
-from interfaces import Optimizer, RiskModel, SignalModel, PricesSource
+from .interfaces import Optimizer, RiskModel, SignalModel, PricesSource
 
 @dataclass
 class BacktestEngine:

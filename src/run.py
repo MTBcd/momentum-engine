@@ -1,9 +1,9 @@
-from config import BacktestConfig
-from engine import BacktestEngine
-from data import YahooPriceSource
-from signals import MomentumSignal
-from optimizers import LongOnlyTopNOptimizer
-from risk import SampleCovariance
+from .config import BacktestConfig
+from .engine import BacktestEngine
+from .data import YahooPriceSource
+from .signals import MomentumSignal
+from .optimizers import LongOnlyTopNOptimizer
+from .risk import SampleCovariance
 
 config = BacktestConfig(
     start_date="2018-01-01",
