@@ -3,7 +3,7 @@ import pandas as pd
 
 @dataclass(frozen=True)
 class BacktestConfig:
-    star_date: str
+    start_date: str
     end_date: str
     univers: list[str]
     lookback_window: int = 252

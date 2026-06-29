@@ -1,15 +1,15 @@
 import pandas as pd
 import yfinance as yf
 from typing import List
-from .interfaces import PriceSource
+from .interfaces import PricesSource
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
-class YahooPriceSource(PriceSource):
-    def get_price_ticker(self, start: str, end: str, symbols: List[str]) -> pd.DataFrame:
+class YahooPriceSource(PricesSource):
+    def get_price_ticker(self, start_date: str, end_date: str, symbols: List[str]) -> pd.DataFrame:
         df = yf.download(tickers=symbols, 
-                             start=start, 
-                             end=end, 
+                             start=start_date, 
+                             end=end_date, 
                              auto_adjust=True,
                              threads=False,)
     

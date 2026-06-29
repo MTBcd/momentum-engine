@@ -13,8 +13,8 @@ class BacktestEngine:
     optimizer : Optimizer
 
     def run(self) -> pd.Series:
-        prices = self.price_source.get_price(
-            start_date = self.config.star_date,
+        prices = self.price_source.get_price_ticker(
+            start_date = self.config.start_date,
             end_date = self.config.end_date,
             symbols = self.config.univers,
         )
